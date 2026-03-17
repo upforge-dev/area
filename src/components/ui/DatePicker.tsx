@@ -238,8 +238,8 @@ function weekdayHeaders(firstDayOfWeek: number) {
 }
 
 function buildCalendar(month: Date, firstDayOfWeek: number) {
-  const start = startOfWeek(startOfMonth(month), { weekStartsOn: firstDayOfWeek });
-  const end = endOfWeek(endOfMonth(month), { weekStartsOn: firstDayOfWeek });
+  const start = startOfWeek(startOfMonth(month), { weekStartsOn: firstDayOfWeek as 0 | 1 | 2 | 3 | 4 | 5 | 6 });
+  const end = endOfWeek(endOfMonth(month), { weekStartsOn: firstDayOfWeek as 0 | 1 | 2 | 3 | 4 | 5 | 6 });
   const days = eachDayOfInterval({ start, end });
   const weeks: Date[][] = [];
   for (let i = 0; i < days.length; i += 7) {
