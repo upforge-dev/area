@@ -242,6 +242,12 @@ export default function LayoutClient({ children }) {
             </div>
             <div className="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500">
               <p>&copy; {new Date().getFullYear()} Adams Real Estate Advisors. All rights reserved.</p>
+              <p className="mt-3 text-xs opacity-60">
+                Powered by{' '}
+                <a href="https://sonor.io" target="_blank" rel="noopener noreferrer" className="text-[#b9945a] hover:text-[#b9945a]/80 transition-colors">
+                  Sonor
+                </a>
+              </p>
             </div>
           </div>
         </footer>
