@@ -49,6 +49,8 @@ export default function LayoutClient({ children }) {
   ]
 
   const isActivePath = (path) => pathname === path
+  const isServicesSection =
+    pathname === '/services' || pathname.startsWith('/services/')
 
   return (
     <>
@@ -63,18 +65,18 @@ export default function LayoutClient({ children }) {
               
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-8">
-                <Link 
-                  href="/" 
-                  className={`capitalize px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
+                <Link
+                  href="/about"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/about') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                 >
-                  Home
+                  About Us
                 </Link>
                 <div className="relative group">
-                  <Link 
-                    href="/services" 
-                    className={`capitalize px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/services') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
+                  <Link
+                    href="/services"
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isServicesSection ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                   >
-                    Services
+                    Client Services
                   </Link>
                   <div className="absolute hidden group-hover:block bg-white shadow-xl rounded-md py-2 w-64 right-0 top-full mt-1 border border-gray-200 z-50">
                     {services.map((service) => (
@@ -88,29 +90,23 @@ export default function LayoutClient({ children }) {
                     ))}
                   </div>
                 </div>
-                <Link 
-                  href="/about" 
-                  className={`capitalize px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/about') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
+                <Link
+                  href="/transactions"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/transactions') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                 >
-                  About
+                  Closed Transactions
                 </Link>
-                <Link 
-                  href="/transactions" 
-                  className={`capitalize px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/transactions') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
+                <Link
+                  href="/contact"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/contact') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                 >
-                  Transactions
+                  Contact Us
                 </Link>
-                <Link 
-                  href="/contact" 
-                  className={`capitalize px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/contact') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
+                <Link
+                  href="/lender-program"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/lender-program') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                 >
-                  Contact
-                </Link>
-                <Link 
-                  href="/lender-program" 
-                  className={`capitalize px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActivePath('/lender-program') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
-                >
-                  Lender Program
+                  Lender Network
                 </Link>
               </div>
 
@@ -134,18 +130,18 @@ export default function LayoutClient({ children }) {
               <div className="md:hidden">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
                   <Link
-                    href="/"
+                    href="/about"
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActivePath('/') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActivePath('/about') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                   >
-                    Home
+                    About Us
                   </Link>
                   <Link
                     href="/services"
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActivePath('/services') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isServicesSection ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                   >
-                    All Services
+                    Client Services
                   </Link>
                   {services.map((service) => (
                     <Link
@@ -158,32 +154,25 @@ export default function LayoutClient({ children }) {
                     </Link>
                   ))}
                   <Link
-                    href="/about"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActivePath('/about') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
-                  >
-                    About
-                  </Link>
-                  <Link
                     href="/transactions"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActivePath('/transactions') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                   >
-                    Transactions
+                    Closed Transactions
                   </Link>
                   <Link
                     href="/contact"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActivePath('/contact') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                   >
-                    Contact
+                    Contact Us
                   </Link>
                   <Link
                     href="/lender-program"
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActivePath('/lender-program') ? 'text-[#081c3e] bg-[#b9945a]/10' : 'text-gray-700 hover:text-[#081c3e] hover:bg-gray-50'}`}
                   >
-                    Lender Program
+                    Lender Network
                   </Link>
                 </div>
               </div>
@@ -243,8 +232,13 @@ export default function LayoutClient({ children }) {
             <div className="mt-8 border-t border-gray-700 pt-8 text-center text-gray-500">
               <p>&copy; {new Date().getFullYear()} Adams Real Estate Advisors. All rights reserved.</p>
               <p className="mt-3 text-xs opacity-60">
+                Built by{' '}
+                <a href="https://upforge.io" target="_blank" rel="noopener nofollow" className="text-[#b9945a] hover:text-[#b9945a]/80 transition-colors">
+                  Upforge
+                </a>
+                {' · '}
                 Powered by{' '}
-                <a href="https://sonor.io" target="_blank" rel="noopener noreferrer" className="text-[#b9945a] hover:text-[#b9945a]/80 transition-colors">
+                <a href="https://sonor.io" target="_blank" rel="noopener nofollow" className="text-[#b9945a] hover:text-[#b9945a]/80 transition-colors">
                   Sonor
                 </a>
               </p>

@@ -8,6 +8,7 @@ import ConstructionCTA from './components/ConstructionCTA'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/services/construction-loans',
     fallback: {
       title: 'Construction Loans | Commercial Real Estate Financing',

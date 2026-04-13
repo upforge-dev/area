@@ -7,6 +7,7 @@ import ContactFAQ from './components/ContactFAQ'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/contact',
     fallback: {
       title: 'Contact Adams Real Estate Advisors | Get Your Free Consultation',

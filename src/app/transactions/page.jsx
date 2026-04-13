@@ -7,6 +7,7 @@ import TransactionsCTA from './components/TransactionsCTA'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/transactions',
     fallback: {
       title: 'Our Transactions | $1.8B+ in Successful Commercial Real Estate Financing',

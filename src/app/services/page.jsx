@@ -7,6 +7,7 @@ import ServicesTestimonial from './components/ServicesTestimonial'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/services',
     fallback: {
       title: 'Commercial Real Estate Financing Services | Adams Real Estate Advisors',

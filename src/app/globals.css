@@ -1,3 +1,4 @@
+@import '@sonordev/site-kit/brand.css';
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -42,6 +43,9 @@
 }
 
 :root {
+  --sk-primary: #081c3e;
+  --sk-primary-rgb: 8, 28, 62;
+  --sk-primary-hover: #061530;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

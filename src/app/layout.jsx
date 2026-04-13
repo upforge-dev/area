@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/',
     fallback: {
       title: 'Adams Real Estate Advisors - Commercial Real Estate Financing',
@@ -20,11 +21,11 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ManagedSchema
-        projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
-        path="/"
-      />
       <body className={inter.className}>
+        <ManagedSchema
+          projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
+          path="/"
+        />
         <SiteKitLayout>
           <LayoutClient>{children}</LayoutClient>
         </SiteKitLayout>

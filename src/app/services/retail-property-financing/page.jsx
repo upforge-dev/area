@@ -7,6 +7,7 @@ import RetailCTA from './components/RetailCTA'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/services/retail-property-financing',
     fallback: {
       title: 'Retail Property Financing | Shopping Centers & Retail Buildings',

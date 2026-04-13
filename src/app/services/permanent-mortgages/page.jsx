@@ -7,6 +7,7 @@ import PermanentCTA from './components/PermanentCTA'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/services/permanent-mortgages',
     fallback: {
       title: 'Permanent Mortgages | Commercial Real Estate Financing',

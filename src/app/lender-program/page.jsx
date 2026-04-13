@@ -8,6 +8,7 @@ import LenderCTA from './components/LenderCTA'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/lender-program',
     fallback: {
       title: 'Lender Partner Program | Adams Real Estate Advisors',

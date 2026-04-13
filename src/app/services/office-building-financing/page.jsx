@@ -7,6 +7,7 @@ import OfficeCTA from './components/OfficeCTA'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/services/office-building-financing',
     fallback: {
       title: 'Office Building Financing | Commercial Office Property Loans',

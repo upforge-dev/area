@@ -7,6 +7,7 @@ import AcqRenovCTA from './components/AcqRenovCTA'
 export async function generateMetadata() {
   return getManagedMetadata({
     projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
+    favicon: 'component',
     path: '/services/acquisition-renovation-financing',
     fallback: {
       title: 'Acquisition & Renovation Financing | Value-Add Commercial Loans',
