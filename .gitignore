@@ -4,3 +4,10 @@ node_modules/
 # Next.js
 /.next/
 /out/
+
+# Env files (never commit keys)
+.env.local
+.env*.local
+
+# macOS
+.DS_Store
