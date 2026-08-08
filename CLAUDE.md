@@ -19,8 +19,11 @@ Content-Security-Policy: frame-ancestors 'self' https://upforge.io https://*.upf
 Every origin not on the list is still blocked, so this is not a blanket
 loosening of clickjacking protection.
 
-Sites on `@sonordev/site-kit` inherit this from `DEFAULT_FRAME_ANCESTORS`
-(`src/middleware/securityHeaders.ts`) — that is the single source of truth.
+Sites on **`@sonordev/site-kit` >= 3.8.0 get this for free** — its
+`securityHeaders` default emits `DEFAULT_FRAME_ANCESTORS` and omits XFO, so a
+plain `securityHeaders: true` is all a site needs. Do not hand-roll a per-site
+CSP override; `DEFAULT_FRAME_ANCESTORS`
+(`src/middleware/securityHeaders.ts`) is the single source of truth.
 Add origins there rather than re-forking the allowlist into each site. A site
 that also sets frame headers in `next.config.*`, `netlify.toml`, `_headers`,
 or `vercel.json` must be fixed in those files too, or they will override the
