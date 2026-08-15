@@ -1,2 +1,5 @@
+allowBuilds:
+  '@sonordev/site-kit': true
+  unrs-resolver: true
 minimumReleaseAgeExclude:
   - '@sonordev/site-kit'
