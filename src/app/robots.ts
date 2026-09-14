@@ -1,12 +1,16 @@
 const BASE_URL = 'https://adamsrealestateadvisors.com'
 
+// Never disallow /_next/: Googlebot renders pages with the CSS, JS and
+// optimized images served from there, and /_next/image is how the site's
+// photos reach Google Images. Blocking it makes Google judge an unstyled,
+// image-less page.
 export default function robots() {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '*.json'],
+        disallow: ['/api/', '*.json'],
       },
       {
         userAgent: 'GPTBot',
