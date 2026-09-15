@@ -28,20 +28,27 @@ export default function AboutPage() {
       <CompanyStory />
       <TeamExpertise />
       <CoreValues />
-      {/* Built by Upforge */}
-      <section className="border-t border-gray-200 bg-gray-50 px-6 py-12">
+      <AboutCTA />
+
+      {/* Site credit: the one followed Upforge link on this domain (footer credits are nofollow). */}
+      <aside aria-label="About this website" className="border-t border-gray-200 bg-gray-50 px-6 py-12">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm text-gray-400">
-            This website was designed and built by{' '}
-            <a href="https://upforge.io" target="_blank" rel="noopener" className="font-medium text-[#081c3e] hover:text-[#b9945a] transition-colors">
-              Upforge
-            </a>
-            , a Cincinnati-based agency building custom web platforms powered by AI.
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            About this website
+          </p>
+          <p className="text-sm leading-relaxed text-gray-500">
+            Adams Real Estate Advisors&apos; website was designed and built by{' '}
+            <a
+              href="https://upforge.io/services/web-development"
+              target="_blank"
+              rel="noopener"
+              className="font-medium text-[#081c3e] underline decoration-[#b9945a]/40 underline-offset-2 transition-colors hover:text-[#b9945a]"
+            >
+              Upforge</a>, a Cincinnati web design and development studio. Each financing program
+            has its own page, alongside our lender program and recent transactions.
           </p>
         </div>
-      </section>
-
-      <AboutCTA />
+      </aside>
     </div>
   )
 }
