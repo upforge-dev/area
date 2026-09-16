@@ -1,18 +1,18 @@
 # Adams Advisors
 
-> Adams Advisors is a commercial real estate financing firm in Rochester, NY, arranging construction loans and permanent mortgages.
-> Content index last updated: 2026-09-16T02:42:43.51076+00:00
+> Adams Advisors is a commercial real estate financing firm in Rochester, NY arranging construction loans and permanent mortgages.
+> Content index last updated: 2026-09-16T03:16:59.064565+00:00
 
 Website: [adamsadvisors.com](https://adamsadvisors.com)
 
 ## Services
 
-- [Acquisition Renovation Financing](https://adamsadvisors.com/services/acquisition-renovation-financing): Find acquisition and renovation financing tailored to investment properties at Adams Advisors; apply now to secure loan terms that support acquisition and rehab timelines.
-- [Commercial Real Estate Refinancing](https://adamsadvisors.com/services/commercial-real-estate-refinancing): Refinance commercial real estate with Adams Advisors to lower payments, pull equity, or extend terms; inquire for a refinancing analysis and competitive rates.
-- [Construction Loans for Commercial Projects](https://adamsadvisors.com/services/construction-loans): Secure construction financing for commercial developments with Adams Advisors; competitive terms, draw management, and lender coordination available. Start your application.
-- [Office Building Financing](https://adamsadvisors.com/services/office-building-financing): Adams Advisors specializes in office building financing solutions for acquisition, renovation, or refinancing; get a tailored financing plan for your property.
-- [Permanent Mortgages for Commercial Properties](https://adamsadvisors.com/services/permanent-mortgages): Secure permanent mortgage solutions with Adams Advisors for stabilized commercial assets; competitive terms and long-term options available. Request a quote.
-- [Retail Property Financing](https://adamsadvisors.com/services/retail-property-financing): Secure customized financing for retail properties with Adams Advisors, offering tailored loan structures, fast closings, and expert underwriting. Contact us to get started.
+- [Acquisition Renovation Financing](https://adamsadvisors.com/services/acquisition-renovation-financing): Find acquisition and renovation financing tailored to investment properties; apply to secure loan terms that support acquisition and rehabilitation timelines.
+- [Commercial Real Estate Refinancing](https://adamsadvisors.com/services/commercial-real-estate-refinancing): Refinance commercial real estate to lower payments, access equity, or extend terms; request a refinancing analysis and competitive rates.
+- [Construction Loans for Commercial Projects](https://adamsadvisors.com/services/construction-loans): Secure construction financing for commercial developments with competitive terms, draw management, and lender coordination.
+- [Office Building Financing](https://adamsadvisors.com/services/office-building-financing): Financing solutions for office building acquisitions, renovations, and refinancing, with tailored plans for each property.
+- [Permanent Mortgages for Commercial Properties](https://adamsadvisors.com/services/permanent-mortgages): Permanent mortgage solutions for stabilized commercial assets, including competitive terms and long-term financing options.
+- [Retail Property Financing](https://adamsadvisors.com/services/retail-property-financing): Customized financing for retail property purchases and refinancing, helping owners and investors evaluate available options.
 
 ## Site Pages
 
@@ -24,6 +24,7 @@ Website: [adamsadvisors.com](https://adamsadvisors.com)
 - [/services/acquisition-renovation-financing](https://adamsadvisors.com/services/acquisition-renovation-financing)
 - [/services/commercial-real-estate-refinancing](https://adamsadvisors.com/services/commercial-real-estate-refinancing)
 - [Office Building Financing for Businesses | Adams Advisors](https://adamsadvisors.com/services/office-building-financing): Explore commercial financing for office building acquisitions, improvements, refinancing, and long-term property needs with Adams Advisors.
+- [/services/construction-loans](https://adamsadvisors.com/services/construction-loans)
 - [/services/permanent-mortgages](https://adamsadvisors.com/services/permanent-mortgages)
 - [Retail Property Financing Programs | Adams Advisors](https://adamsadvisors.com/services/retail-property-financing): This page covers Adams Advisors' financing guidance for commercial retail property purchases and refinancing, helping owners and investors evaluate their available options.
 - [Commercial Real Estate Transactions | Adams Advisors](https://adamsadvisors.com/transactions): Explore commercial real estate transaction information associated with Adams Advisors, including acquisitions, refinancing, construction, renovations, and property financing.
