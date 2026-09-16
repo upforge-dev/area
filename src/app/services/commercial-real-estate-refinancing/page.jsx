@@ -1,4 +1,4 @@
-import { getManagedMetadata, ManagedSchema } from '@sonordev/site-kit/seo'
+import { getManagedMetadata, LLMSchema, ManagedSchema } from '@sonordev/site-kit/seo'
 import RefinancingHero from './components/RefinancingHero'
 import RefinancingBenefits from './components/RefinancingBenefits'
 import RefinancingScenarios from './components/RefinancingScenarios'
@@ -6,7 +6,6 @@ import RefinancingCTA from './components/RefinancingCTA'
 
 export async function generateMetadata() {
   return getManagedMetadata({
-    projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
     favicon: 'component',
     path: '/services/commercial-real-estate-refinancing',
     fallback: {
@@ -19,10 +18,8 @@ export async function generateMetadata() {
 export default function RefinancingPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ManagedSchema
-        projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
-        path="/services/commercial-real-estate-refinancing"
-      />
+      <ManagedSchema path="/services/commercial-real-estate-refinancing" />
+      <LLMSchema path="/services/commercial-real-estate-refinancing" />
       <RefinancingHero />
       <RefinancingBenefits />
       <RefinancingScenarios />

@@ -1,4 +1,4 @@
-import { getManagedMetadata, ManagedSchema } from '@sonordev/site-kit/seo'
+import { getManagedMetadata, LLMSchema, ManagedSchema } from '@sonordev/site-kit/seo'
 import RetailHero from './components/RetailHero'
 import RetailFeatures from './components/RetailFeatures'
 import RetailPropertyTypes from './components/RetailPropertyTypes'
@@ -6,7 +6,6 @@ import RetailCTA from './components/RetailCTA'
 
 export async function generateMetadata() {
   return getManagedMetadata({
-    projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
     favicon: 'component',
     path: '/services/retail-property-financing',
     fallback: {
@@ -19,10 +18,8 @@ export async function generateMetadata() {
 export default function RetailPropertyFinancingPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ManagedSchema
-        projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
-        path="/services/retail-property-financing"
-      />
+      <ManagedSchema path="/services/retail-property-financing" />
+      <LLMSchema path="/services/retail-property-financing" />
       <RetailHero />
       <RetailFeatures />
       <RetailPropertyTypes />

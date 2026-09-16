@@ -1,6 +1,10 @@
-'use client'
-
+/**
+ * Server component. It has no state, no effects and no handlers, and it now
+ * renders site-kit's AEO markup, which is server-only (the llms entry reaches
+ * for `fs`). Adding 'use client' back would fail the build.
+ */
 import { DollarSign, Award, TrendingUp, Users } from 'lucide-react'
+import { AEOSummary } from '@sonordev/site-kit/llms'
 
 const stats = [
   { label: "Total Financing", value: "$1.8B+", icon: DollarSign, description: "Across 500+ successful deals" },
@@ -21,6 +25,15 @@ export default function Stats() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* The same four figures the tiles show, in a list an answer engine
+            can lift. Each stat's detail line is hidden below md, so this is
+            also the only place a phone reads it. No new numbers. */}
+        <AEOSummary
+          title="Adams Real Estate Advisors at a glance"
+          points={stats.map((stat) => `${stat.label}: ${stat.value}. ${stat.description}.`)}
+          className="sr-only"
+        />
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, index) => (
             <div 

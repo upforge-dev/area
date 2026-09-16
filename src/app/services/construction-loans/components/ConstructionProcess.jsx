@@ -1,6 +1,10 @@
-'use client'
-
+/**
+ * Server component. It has no state, no effects and no handlers, and it now
+ * renders site-kit's AEO markup, which is server-only (the llms entry reaches
+ * for `fs`). Adding 'use client' back would fail the build.
+ */
 import { FileText, Search, FileCheck, Hammer, Key } from 'lucide-react'
+import { AEOSteps, AEOStep } from '@sonordev/site-kit/llms'
 
 const steps = [
   {
@@ -43,6 +47,16 @@ export default function ConstructionProcess() {
           </p>
         </div>
         
+        {/* The five steps below, restated as HowTo markup. The visible cards
+            carry icons and cannot be the list itself; the words are theirs. */}
+        <AEOSteps title="The construction financing process" className="sr-only">
+          {steps.map((step, index) => (
+            <AEOStep key={step.title} number={index + 1} name={step.title}>
+              {step.description}
+            </AEOStep>
+          ))}
+        </AEOSteps>
+
         <div className="space-y-8">
           {steps.map((step, index) => (
             <div key={index} className="flex items-start gap-6 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">

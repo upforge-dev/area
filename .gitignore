@@ -11,3 +11,9 @@ node_modules/
 
 # macOS
 .DS_Store
+
+# sonor-setup og review artifacts (the thumbnail preview)
+/.sonor/
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo

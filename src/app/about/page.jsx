@@ -1,4 +1,4 @@
-import { getManagedMetadata, ManagedSchema } from '@sonordev/site-kit/seo'
+import { getManagedMetadata, LLMSchema, ManagedSchema } from '@sonordev/site-kit/seo'
 import AboutHero from './components/AboutHero'
 import CompanyStory from './components/CompanyStory'
 import TeamExpertise from './components/TeamExpertise'
@@ -7,7 +7,6 @@ import AboutCTA from './components/AboutCTA'
 
 export async function generateMetadata() {
   return getManagedMetadata({
-    projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
     favicon: 'component',
     path: '/about',
     fallback: {
@@ -20,10 +19,8 @@ export async function generateMetadata() {
 export default function AboutPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ManagedSchema
-        projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
-        path="/about"
-      />
+      <ManagedSchema path="/about" />
+      <LLMSchema path="/about" />
       <AboutHero />
       <CompanyStory />
       <TeamExpertise />

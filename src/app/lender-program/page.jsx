@@ -1,4 +1,4 @@
-import { getManagedMetadata, ManagedSchema } from '@sonordev/site-kit/seo'
+import { getManagedMetadata, LLMSchema, ManagedSchema } from '@sonordev/site-kit/seo'
 import LenderProgramHero from './components/LenderProgramHero'
 import ProgramBenefits from './components/ProgramBenefits'
 import DealFlow from './components/DealFlow'
@@ -7,7 +7,6 @@ import LenderCTA from './components/LenderCTA'
 
 export async function generateMetadata() {
   return getManagedMetadata({
-    projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
     favicon: 'component',
     path: '/lender-program',
     fallback: {
@@ -20,10 +19,8 @@ export async function generateMetadata() {
 export default function LenderProgramPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ManagedSchema
-        projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
-        path="/lender-program"
-      />
+      <ManagedSchema path="/lender-program" />
+      <LLMSchema path="/lender-program" />
       <LenderProgramHero />
       <ProgramBenefits />
       <DealFlow />

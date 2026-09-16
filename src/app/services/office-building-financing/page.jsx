@@ -1,4 +1,4 @@
-import { getManagedMetadata, ManagedSchema } from '@sonordev/site-kit/seo'
+import { getManagedMetadata, LLMSchema, ManagedSchema } from '@sonordev/site-kit/seo'
 import OfficeHero from './components/OfficeHero'
 import OfficeFeatures from './components/OfficeFeatures'
 import OfficePropertyTypes from './components/OfficePropertyTypes'
@@ -6,7 +6,6 @@ import OfficeCTA from './components/OfficeCTA'
 
 export async function generateMetadata() {
   return getManagedMetadata({
-    projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
     favicon: 'component',
     path: '/services/office-building-financing',
     fallback: {
@@ -19,10 +18,8 @@ export async function generateMetadata() {
 export default function OfficeFinancingPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ManagedSchema
-        projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
-        path="/services/office-building-financing"
-      />
+      <ManagedSchema path="/services/office-building-financing" />
+      <LLMSchema path="/services/office-building-financing" />
       <OfficeHero />
       <OfficeFeatures />
       <OfficePropertyTypes />

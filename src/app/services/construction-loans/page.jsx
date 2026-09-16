@@ -1,4 +1,4 @@
-import { getManagedMetadata, ManagedSchema } from '@sonordev/site-kit/seo'
+import { getManagedMetadata, LLMSchema, ManagedSchema } from '@sonordev/site-kit/seo'
 import ConstructionLoansHero from './components/ConstructionLoansHero'
 import LoanFeatures from './components/LoanFeatures'
 import PropertyTypes from './components/PropertyTypes'
@@ -7,7 +7,6 @@ import ConstructionCTA from './components/ConstructionCTA'
 
 export async function generateMetadata() {
   return getManagedMetadata({
-    projectId: process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID,
     favicon: 'component',
     path: '/services/construction-loans',
     fallback: {
@@ -20,10 +19,8 @@ export async function generateMetadata() {
 export default function ConstructionLoansPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <ManagedSchema
-        projectId={process.env.NEXT_PUBLIC_UPTRADE_PROJECT_ID}
-        path="/services/construction-loans"
-      />
+      <ManagedSchema path="/services/construction-loans" />
+      <LLMSchema path="/services/construction-loans" />
       <ConstructionLoansHero />
       <LoanFeatures />
       <PropertyTypes />
