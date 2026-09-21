@@ -36,7 +36,7 @@ export default function AboutPage() {
           <p className="text-sm leading-relaxed text-gray-500">
             Adams Real Estate Advisors&apos; website was designed and built by{' '}
             <a
-              href="https://upforge.io/services/web-development"
+              href="https://upforge.io/web-design"
               target="_blank"
               rel="noopener"
               className="font-medium text-[#081c3e] underline decoration-[#b9945a]/40 underline-offset-2 transition-colors hover:text-[#b9945a]"
