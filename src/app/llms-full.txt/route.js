@@ -1,4 +1,4 @@
-import { createLLMsFullTxtHandler } from '@sonordev/site-kit/llms'
+import { createLLMsFullTxtHandler } from '@sonordev/site-kit/seo/llms'
 import { getLocalLlmsData } from '@/lib/llms-data'
 
 /**

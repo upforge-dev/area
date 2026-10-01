@@ -1,4 +1,4 @@
-import { createMiddleware } from '@sonordev/site-kit/middleware'
+import { createProxy } from '@sonordev/site-kit/proxy'
 import { SITE_URL } from '@/lib/site-url'
 
 /**
@@ -9,7 +9,7 @@ import { SITE_URL } from '@/lib/site-url'
  * Upforge can embed the site without the site dropping its clickjacking
  * protection.
  */
-export default createMiddleware({
+export default createProxy({
   redirects: true,
   securityHeaders: true,
   llmsDiscovery: { siteUrl: SITE_URL },

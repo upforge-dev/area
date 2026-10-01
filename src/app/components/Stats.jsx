@@ -4,7 +4,7 @@
  * for `fs`). Adding 'use client' back would fail the build.
  */
 import { DollarSign, Award, TrendingUp, Users } from 'lucide-react'
-import { AEOSummary } from '@sonordev/site-kit/llms'
+import { AEOSummary } from '@sonordev/site-kit/seo/llms'
 
 const stats = [
   { label: "Total Financing", value: "$1.8B+", icon: DollarSign, description: "Across 500+ successful deals" },

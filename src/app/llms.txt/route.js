@@ -1,4 +1,4 @@
-import { createLLMsTxtHandler } from '@sonordev/site-kit/llms'
+import { createLLMsTxtHandler } from '@sonordev/site-kit/seo/llms'
 import { getLocalLlmsData } from '@/lib/llms-data'
 
 export const GET = createLLMsTxtHandler({

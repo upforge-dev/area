@@ -4,7 +4,7 @@
  * for `fs`). Adding 'use client' back would fail the build.
  */
 import { Lightbulb, Handshake, CheckCircle } from 'lucide-react'
-import { AEOSteps, AEOStep } from '@sonordev/site-kit/llms'
+import { AEOSteps, AEOStep } from '@sonordev/site-kit/seo/llms'
 
 const steps = [
   {

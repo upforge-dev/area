@@ -1,4 +1,4 @@
-import { createSitemap } from '@sonordev/site-kit/sitemap'
+import { createSitemap } from '@sonordev/site-kit/seo/sitemap'
 import { SITE_URL } from '@/lib/site-url'
 
 export default createSitemap({

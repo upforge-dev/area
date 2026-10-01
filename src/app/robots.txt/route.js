@@ -1,4 +1,4 @@
-import { buildAiCrawlerRules, createRobotsTxtHandler } from '@sonordev/site-kit/llms'
+import { buildAiCrawlerRules, createRobotsTxtHandler } from '@sonordev/site-kit/seo/llms'
 import { SITE_HOST, SITE_URL } from '@/lib/site-url'
 
 /**
