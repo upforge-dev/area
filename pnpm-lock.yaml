@@ -93,8 +93,8 @@ importers:
         specifier: ^1.2.8
         version: 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@sonordev/site-kit':
-        specifier: ^7.1.2
-        version: 7.1.2(@sanity/image-url@2.1.1)(next@16.3.8(@babel/core@7.29.7)(@types/node@25.5.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+        specifier: ^7.2.0
+        version: 7.2.0(@sanity/image-url@2.1.1)(next@16.3.8(@babel/core@7.29.7)(@types/node@25.5.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       autoprefixer:
         specifier: ^10.4.27
         version: 10.4.27(postcss@8.5.9)
@@ -1884,8 +1884,8 @@ packages:
   '@socket.io/component-emitter@3.1.2':
     resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
 
-  '@sonordev/site-kit@7.1.2':
-    resolution: {integrity: sha512-/5DahjEoeu+xApzxXw49qOyRuxNlb9ul/fXTqtiGIPKkzHULIX5oGaWOXoaJYlBgz/bUSvnINxnHs2WMgqIAPA==}
+  '@sonordev/site-kit@7.2.0':
+    resolution: {integrity: sha512-WpSflNEyrytxHknzQSRzzZ4JzrsSYWTkoAoK2QjNJmuYIVKZlRwm4G7oGmj4VfTXeO1SFVBZomkk4xqz+t7ZEw==}
     engines: {node: '>=20.19'}
     hasBin: true
     peerDependencies:
@@ -5986,7 +5986,7 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@sonordev/site-kit@7.1.2(@sanity/image-url@2.1.1)(next@16.3.8(@babel/core@7.29.7)(@types/node@25.5.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)':
+  '@sonordev/site-kit@7.2.0(@sanity/image-url@2.1.1)(next@16.3.8(@babel/core@7.29.7)(@types/node@25.5.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)':
     dependencies:
       engine.io-client: 6.6.6
       marked: 18.0.9
