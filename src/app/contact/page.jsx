@@ -1,8 +1,10 @@
 import { getManagedMetadata, LLMSchema, ManagedSchema, ManagedFAQ } from '@sonordev/site-kit/seo'
+import { getFormConfig } from '@sonordev/site-kit/forms/server'
 import ContactHero from './components/ContactHero'
 import ContactForm from './components/ContactForm'
 import ContactInfo from './components/ContactInfo'
 import ContactFAQ from './components/ContactFAQ'
+import { CONTACT_FORM_SLUG } from '@/lib/site-contact'
 
 export async function generateMetadata() {
   return getManagedMetadata({
@@ -15,7 +17,12 @@ export async function generateMetadata() {
   })
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  // Fetched on the server (read-only, null on failure) so the form's fields are
+  // in the page HTML instead of waiting on a request after hydration. If this
+  // comes back null, the form fetches its own config in the browser.
+  const contactForm = await getFormConfig(CONTACT_FORM_SLUG)
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <ManagedSchema path="/contact" />
@@ -24,7 +31,7 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <ContactForm />
+            <ContactForm initialForm={contactForm} />
           </div>
           <div>
             <ContactInfo />
